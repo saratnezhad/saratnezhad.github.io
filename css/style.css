@@ -379,3 +379,13 @@ html{scroll-padding-top:96px}
 .toc-title{text-transform:none;letter-spacing:0;font-size:14px}
 @media (max-width:1100px){.band{padding:32px;border-radius:20px}.section.band{margin-bottom:64px;padding-bottom:32px}.head{flex-direction:column;align-items:flex-start;gap:8px}.head .sub{text-align:left}}
 @media (max-width:700px){.band{padding:20px;border-radius:16px}.section.band{margin-bottom:48px;padding-bottom:20px}}
+
+/* ---------- sticky nav, colleague quotes ---------- */
+.nav{position:sticky;top:0;z-index:20;background:rgba(248,247,243,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.quote{margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:32px;border-radius:var(--radius);background:var(--white);border:1px solid var(--card-line)}
+.quote blockquote{margin:0;font-size:18px;line-height:1.55;color:var(--ink)}
+.quote blockquote::before{content:"\201C";display:block;font-size:48px;line-height:.6;color:var(--accent);margin-bottom:12px;font-weight:800}
+.quote figcaption{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+.quote figcaption b{color:var(--ink);font-size:15px}
+@media (max-width:1100px){.quotes{grid-template-columns:repeat(2,minmax(0,1fr))}.quote{padding:24px}}
+@media (max-width:700px){.quotes{grid-template-columns:1fr}}
