@@ -1,6 +1,6 @@
 /* ---------- tokens: change colours and type here ---------- */
 :root{
-  --ground:#FBFAF8; --ink:#14161F; --body:#3A3D47; --muted:#5B5F6B;
+  --ground:##FDFDFC; --ink:#14161F; --body:#3A3D47; --muted:#5B5F6B;
   --accent:#1A56DB; --accent-dark:#12409F; --line:#D9D8D2; --card-line:#E2E1DB;
   --panel:#E7EAF0; --tint:#DDE4F5; --soft:#EBEAE4; --white:#FFFFFF;
   --font:'Manrope',system-ui,-apple-system,"Segoe UI",sans-serif;
