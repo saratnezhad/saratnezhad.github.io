@@ -553,3 +553,6 @@ html{scroll-padding-top:96px}
   .rows .item .date{white-space:normal}
 }
 @media (max-width:700px){.results-grid{grid-template-columns:1fr !important}.tile{flex-direction:row;align-items:baseline;gap:12px}.tile b{font-size:24px}}
+.media-wide{height:420px;border-radius:20px;overflow:hidden;background:var(--panel);margin-top:8px;position:relative}
+.case-hero .slot{position:absolute;inset:0}.case-hero{position:relative}
+@media (max-width:700px){.media-wide{height:220px}}
