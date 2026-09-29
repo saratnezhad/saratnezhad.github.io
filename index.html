@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sara Taleb Nezhad · UX Designer & Researcher, Munich</title>
+<title>Sara Taleb-Nezhad · UX Designer & Researcher, Munich</title>
 <meta name="description" content="UX designer and researcher with a biomedical engineering background. Eye-tracking, usability testing and field research for automotive, medical and industrial interfaces.">
-<meta property="og:title" content="Sara Taleb Nezhad · UX Designer & Researcher, Munich">
+<meta property="og:title" content="Sara Taleb-Nezhad · UX Designer & Researcher, Munich">
 <meta property="og:description" content="UX designer and researcher with a biomedical engineering background. Eye-tracking, usability testing and field research for automotive, medical and industrial interfaces.">
 <meta property="og:image" content="images/og-image.png">
 <meta property="og:type" content="website">
@@ -15,10 +15,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="is-home">
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html">Sara Taleb Nezhad</a>
+    <a class="brand" href="index.html">Sara Taleb-Nezhad</a>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
     <nav class="menu" id="menu">
       <a href="work.html">Work</a>
@@ -29,26 +29,35 @@
   </div>
 </header>
 <main>
-<section class="hero"><div class="wrap cols">
+<section class="hero hero-b"><div class="wrap cols">
   <div class="hero-text">
     <div class="kicker">UI/UX Designer &amp; Researcher · Munich</div>
-    <h1 class="h1">I design interfaces for systems where a mistake <span class="accent">costs something.</span></h1>
-    <p class="lead">Cars, hospitals, factory floors. I came from biomedical engineering, so I test whether a design actually helps, with eye-tracking, usability studies and field observation, before I make it beautiful.</p>
+    <h1 class="h1">I design interfaces for systems where a mistake costs something.</h1>
+    <p class="lead">Cars, hospitals, factory floors. I came from biomedical engineering, so I test whether a design actually helps before I make it beautiful.</p>
     <div class="btn-row"><a class="btn primary" href="#work">See selected work <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="about.html">About me</a></div>
+    <div class="facts-line"><span><b>5</b> yrs of design</span><span><b>M.Sc.</b> UX Design, 2026</span><span><b>B.Sc.</b> Biomedical Eng.</span></div>
   </div>
-  <div class="hero-stats">
-    <div class="stat"><b>5 yrs</b><span>of design practice across medical, automotive, logistics and B2B</span></div>
-    <div class="stat"><b>M.Sc.</b><span>UX Design, TH Ingolstadt · eye-tracking thesis with the HCI group</span></div>
-    <div class="stat"><b>B.Sc.</b><span>Biomedical Engineering · built a pulse oximeter from the sensor up</span></div>
+  <div class="hero-gallery">
+    <div class="rail" id="rail">
+      <a class="slide" href="work/klingele.html"><img src="images/klingele-screen.png" alt="Klingele shift-handover dashboard"><span>Klingele · shift handover</span></a>
+      <a class="slide" href="work.html"><div class="placeholder ">[Eye-tracking setup, master thesis]</div><span>Thesis · driver distraction</span></a>
+      <a class="slide" href="work.html"><img src="images/bondi.png" alt="Bondi"><span>Bondi · intercultural dating</span></a>
+      <a class="slide" href="work.html"><img src="images/discover-thi.png" alt="Discover THI"><span>Discover THI · AR campus hunt</span></a>
+    </div>
+    <div class="rail-ui"><div class="rail-progress"><span id="rail-bar"></span></div><div class="rail-count"><b id="rail-i">01</b> / 04</div><div class="rail-btns"><button type="button" aria-label="Previous" data-dir="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button><button type="button" aria-label="Next" data-dir="1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button></div></div>
   </div>
 </div></section>
+<script>
+(function(){var r=document.getElementById('rail'),bar=document.getElementById('rail-bar'),ci=document.getElementById('rail-i'),n=r.children.length;
+function upd(){var w=r.firstElementChild.offsetWidth+24,i=Math.round(r.scrollLeft/w);ci.textContent=String(Math.min(i,n-1)+1).padStart(2,'0');bar.style.width=((Math.min(i,n-1)+1)/n*100)+'%';}
+r.addEventListener('scroll',upd,{passive:true});upd();
+document.querySelectorAll('.rail-btns button').forEach(function(b){b.addEventListener('click',function(){var w=r.firstElementChild.offsetWidth+24;r.scrollBy({left:w*Number(b.dataset.dir),behavior:'smooth'});});});
+})();
+</script>
 <section class="section" id="work"><div class="wrap">
-  <div class="head"><h2 class="h2">Selected work</h2><a class="more" href="work.html">All eight projects</a></div>
+  <div class="head"><h2 class="h2">Selected work</h2><a class="more arrow-link" href="work.html"><span>All projects</span><i></i></a></div>
   <div class="stack" style="gap:24px">
-    <a class="card-wide" href="work/klingele.html"><div class="text"><div class="stack"><div class="meta" style="font-weight:600;font-size:12px;letter-spacing:.04em;color:var(--accent)">01 · Industry project · OpenPack (Klingele) · 2024</div><div class="title">Shift handover that doesn't lose the night shift's knowledge</div><div class="desc">Contextual interviews on the floor, user flows, Figma prototypes and structured usability tests with the people who do the handover. Presented to OpenPack and defended to non-design stakeholders.</div></div><div class="tag" style="display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px"><span>Faster tasks, fewer errors in usability testing</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div></div><div class="media"><div class="floating"><div><img src="images/klingele-screen.png" alt="Klingele shift-handover dashboard"></div></div></div></a>
-    <div class="grid grid-2"><a class="card tall" href="work.html"><div class="media"><div class="placeholder ">[Gaze heatmap over the in-vehicle prototype]</div></div><div class="text"><div class="meta">02 · Master's thesis · HCI Group, TH Ingolstadt · 2025 to 2026</div><div class="title">Does a simpler in-vehicle interface actually reduce driver distraction?</div><div class="desc">Controlled eye-tracking experiment: prototypes, study design and gaze analysis. Supervised by Prof. Andreas Riener.</div><div class="tag"><span>Experiment design · gaze metrics</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div></div></a><a class="card tall" href="work.html"><div class="media"><div class="placeholder ">[5going app in the Car2X lab]</div></div><div class="text"><div class="meta">03 · Lead UX/UI · Car2X Lab, TH Ingolstadt</div><div class="title">5going: a connected-vehicle lab workflow engineers actually use</div><div class="desc">User research with engineers, flows, wireframes, prototypes and feedback-driven iteration.</div><div class="tag"><span>Research to prototype to iteration</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div></div></a></div>
-    <div class="grid grid-3"><a class="card" href="work.html"><div class="media center"><img src="images/bondi.png" alt="Bondi: a dating app for intercultural couples"></div><div class="text"><div class="meta">04 · Visual Interface Design · TH Ingolstadt · SS 2025</div><div class="title">Bondi: a dating app for intercultural couples</div><div class="desc">Designed to reduce cultural bias in dating: research, personas, flows and a high-fidelity prototype.</div><div class="tag"><span>App design · UX research</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div></div></a><a class="card" href="work.html"><div class="media"><div class="placeholder ">[Chemo-support app screens]</div></div><div class="text"><div class="meta">05 · 5-day sprint · ACE² Workshop, Gdańsk · 2025</div><div class="title">AI-powered post-chemotherapy support app</div><div class="desc">Needs analysis, AI support features and an interactive prototype in an international team.</div><div class="tag"><span>AI concept · Prototyping</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div></div></a><a class="card" href="work.html"><div class="media center"><img src="images/discover-thi.png" alt="Discover THI: a mobile AR treasure hunt across campus"></div><div class="text"><div class="meta">06 · AR/VR · TH Ingolstadt · Oct 2024 to Feb 2025</div><div class="title">Discover THI: a mobile AR treasure hunt across campus</div><div class="desc">A mobile AR game that gets new students exploring the campus: concept, flows and visual design.</div><div class="tag"><span>AR/VR · Interaction design</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div></div></a></div>
-    <div class="strip"><div><b>Brand and visual design</b><span>THI Startup Center identity, Sib Sabz studio, WeboSeo, campaigns and landing pages</span></div><a class="btn small" href="work.html">All projects</a></div>
+    <div class="gallery"><a class="gcard" href="work/klingele.html"><div class="gmedia"><img src="images/klingele-screen.png" alt="Shift handover that doesn't lose the night shift's knowledge"></div><div class="gtext"><div class="grow"><div class="gtitle">Shift handover that doesn't lose the night shift's knowledge</div><div class="gyear">2024</div></div><div class="gdesc">Research-led redesign of a B2B handover system for corrugated-board factories, tested with operators.</div><div class="gmeta">Industry project · OpenPack (Klingele)</div></div></a><a class="gcard" href="work.html"><div class="gmedia"><div class="placeholder ">[Gaze heatmap over the in-vehicle prototype]</div></div><div class="gtext"><div class="grow"><div class="gtitle">Does a simpler in-vehicle interface actually reduce driver distraction?</div><div class="gyear">2025 to 2026</div></div><div class="gdesc">Controlled eye-tracking experiment: prototypes, study design and gaze analysis. Supervised by Prof. Andreas Riener.</div><div class="gmeta">Master's thesis · HCI Group, TH Ingolstadt</div></div></a><a class="gcard" href="work.html"><div class="gmedia"><div class="placeholder ">[5going app in the Car2X lab]</div></div><div class="gtext"><div class="grow"><div class="gtitle">5going: a connected-vehicle lab workflow engineers actually use</div><div class="gyear"></div></div><div class="gdesc">User research with engineers, flows, wireframes, prototypes and feedback-driven iteration.</div><div class="gmeta">Lead UX/UI · Car2X Lab, TH Ingolstadt</div></div></a><a class="gcard" href="work.html"><div class="gmedia center"><img src="images/bondi.png" alt="Bondi: a dating app for intercultural couples"></div><div class="gtext"><div class="grow"><div class="gtitle">Bondi: a dating app for intercultural couples</div><div class="gyear">SS 2025</div></div><div class="gdesc">Designed to reduce cultural bias in dating: research, personas, flows and a high-fidelity prototype.</div><div class="gmeta">Visual Interface Design · TH Ingolstadt</div></div></a><a class="gcard" href="work.html"><div class="gmedia"><div class="placeholder ">[Chemo-support app screens]</div></div><div class="gtext"><div class="grow"><div class="gtitle">AI-powered post-chemotherapy support app</div><div class="gyear">2025</div></div><div class="gdesc">Needs analysis, AI support features and an interactive prototype in an international team.</div><div class="gmeta">5-day sprint · ACE² Workshop, Gdańsk</div></div></a><a class="gcard" href="work.html"><div class="gmedia center"><img src="images/discover-thi.png" alt="Discover THI: a mobile AR treasure hunt across campus"></div><div class="gtext"><div class="grow"><div class="gtitle">Discover THI: a mobile AR treasure hunt across campus</div><div class="gyear">Oct 2024 to Feb 2025</div></div><div class="gdesc">A mobile AR game that gets new students exploring the campus: concept, flows and visual design.</div><div class="gmeta">AR/VR · TH Ingolstadt</div></div></a></div>
   </div>
 </div></section>
 <section class="section"><div class="wrap">
@@ -62,21 +71,22 @@
 <section class="section"><div class="wrap cols about-strip">
   <div class="photo"><div class="placeholder ">[Photo of Sara, the one from the CV]</div></div>
   <div class="text stack">
-    <h2 class="h2">I spent months watching clinical staff work around bad hospital software. Then I made that problem my job.</h2>
+    <h2 class="h2 section-title">About me</h2>
+    <p class="h3" style="font-weight:700">I spent months watching clinical staff work around bad hospital software. Then I made that problem my job.</p>
     <p class="para">Biomedical engineer by training, UX designer and researcher by choice. Five years across medical, automotive, logistics and B2B products, now finishing an M.Sc. in UX Design at TH Ingolstadt. English C1, German B1, Persian native.</p>
     <a href="about.html" style="font-weight:600;text-decoration:none">The full story</a>
   </div>
 </div></section>
 <section class="section"><div class="wrap">
-  <div class="head"><h2 class="h2">What colleagues say</h2><p class="sub">People I have worked with, in their words</p></div>
-  <div class="grid grid-3 quotes"><figure class="quote"><blockquote>[One or two sentences from the OpenPack product owner about the handover project.]</blockquote><figcaption><b>[Name]</b><span>Product Owner, OpenPack (Klingele)</span></figcaption></figure><figure class="quote"><blockquote>[One or two sentences from your supervisor or a colleague at TH Ingolstadt about your research work.]</blockquote><figcaption><b>[Name]</b><span>TH Ingolstadt</span></figcaption></figure><figure class="quote"><blockquote>[One or two sentences from a colleague at the THI Startup Center or Sib Sabz about working with you.]</blockquote><figcaption><b>[Name]</b><span>[Role, company]</span></figcaption></figure></div>
+  <div class="head"><h2 class="h2">Recommendations</h2></div>
+  <div class="grid grid-3 quotes"><figure class="quote"><figcaption><div class="who"><b>[Name]</b><span>Product Owner, OpenPack (Klingele)</span></div><div class="avatar" aria-hidden="true">photo</div></figcaption><blockquote>[One or two sentences from the OpenPack product owner about the handover project.]</blockquote></figure><figure class="quote"><figcaption><div class="who"><b>[Name]</b><span>TH Ingolstadt</span></div><div class="avatar" aria-hidden="true">photo</div></figcaption><blockquote>[One or two sentences from your supervisor or a colleague at TH Ingolstadt about your research work.]</blockquote></figure><figure class="quote"><figcaption><div class="who"><b>[Name]</b><span>[Role, company]</span></div><div class="avatar" aria-hidden="true">photo</div></figcaption><blockquote>[One or two sentences from a colleague at the THI Startup Center or Sib Sabz about working with you.]</blockquote></figure></div>
 </div></section>
 </main>
 <footer class="footer">
   <div class="wrap">
     <div class="cols">
       <div class="intro">
-        <a class="brand" href="index.html">Sara Taleb Nezhad</a>
+        <a class="brand" href="index.html">Sara Taleb-Nezhad</a>
         <p>UX designer and researcher in Munich. Open to UX research and product design roles in Germany, and to PhD positions in HCI.</p>
         <a class="mail" href="mailto:tnezhad.sara@gmail.com">tnezhad.sara@gmail.com</a>
       </div>
@@ -86,7 +96,7 @@
       <div class="col c3"><div class="k">Legal</div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
       </div>
     </div>
-    <div class="bottom"><span>2026 Sara Taleb Nezhad, Munich</span><span>Last updated September 2026</span></div>
+    <div class="bottom"><span>2026 Sara Taleb-Nezhad, Munich</span><span>Last updated September 2026</span></div>
   </div>
 </footer>
 <script>
